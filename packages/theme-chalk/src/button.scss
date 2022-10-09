@@ -1,0 +1,129 @@
+@charset "UTF-8";
+@import "./common/var.scss";
+
+@mixin disabled-button {
+  cursor: not-allowed;
+  background-image: none;
+}
+
+// 基于element-ui button 基础样式
+.td-button {
+  height: 32px;
+  min-width: 74px;
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: $--default-fill-color-1;
+  border: $--border-base;
+  color: $--normal-font-color-1;
+  -webkit-appearance: none;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  font-weight: 500;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  font-size: 14px;
+  border-radius: 4px;
+  &.td-button--mini {
+    font-size: 12px;
+    height: 28px;
+  }
+  &.td-button--text {
+    height: unset;
+    min-width: unset;
+    background: none;
+    border: none;
+    color: inherit;
+    text-align: unset;
+    border-radius: unset;
+    &:focus,
+    &.is-visited {
+      opacity: 0.5;
+    }
+    + .td-button--text {
+      margin-left: unset;
+    }
+  }
+  &.td-button--default {
+    color: $--normal-font-color-1;
+    background-color: $--default-fill-color-1;
+    border-color: #c7cddf;
+
+    &:hover {
+      color: $--main-fill-color-1;
+      background-color: rgba(107, 156, 245, 0.2);
+      border-color: $--main-fill-color-1;
+    }
+
+    &:active {
+      color: #4678d4;
+      background-color: rgba(70, 120, 212, 0.3);
+      border-color: #4678d4;
+    }
+    &.is-disabled {
+      @include disabled-button;
+      color: $--normal-font-color-1;
+      border-color: #eeeeee;
+      background-color: #eeeeee;
+    }
+  }
+
+  &.td-button--primary {
+    color: $--default-font-color-1;
+    background-color: $--main-fill-color-1;
+    border-color: $--main-fill-color-1;
+    &:hover {
+      color: $--default-font-color-1;
+      background-color: #6b9cf5;
+      border-color: #6b9cf5;
+    }
+
+    &:active {
+      color: $--default-font-color-1;
+      background-color: #4678d4;
+      border-color: #4678d4;
+    }
+    &.is-disabled {
+      @include disabled-button;
+      color: $--default-font-color-1;
+      border-color: $--main-fill-color-1;
+      background-color: $--main-fill-color-1;
+      opacity: 0.3;
+    }
+  }
+
+  &.td-button--danger {
+    color: $--default-font-color-1;
+    background-color: $--secondary-fill-color-3;
+    border-color: $--secondary-fill-color-3;
+    &:hover {
+      color: $--default-font-color-1;
+      background-color: #ff9089;
+      border-color: #ff9089;
+    }
+
+    &:active {
+      color: $--default-font-color-1;
+      background-color: #c56d67;
+      border-color: #c56d67;
+    }
+    &.is-disabled {
+      @include disabled-button;
+      color: $--default-font-color-1;
+      border-color: $--secondary-fill-color-3;
+      background-color: $--secondary-fill-color-3;
+      opacity: 0.3;
+    }
+  }
+
+  + .td-button {
+    margin-left: 20px;
+  }
+}

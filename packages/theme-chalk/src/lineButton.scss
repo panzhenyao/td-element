@@ -1,0 +1,144 @@
+$default: #409eff;
+$success: #67c23a;
+$danger: #f56c6c;
+$info: #909399;
+$warn: #cf9236;
+@mixin colorBtn($color) {
+  background: $color;
+  &:hover {
+    color: $color;
+    &:before,
+    &:after {
+      background: $color;
+    }
+  }
+}
+.td-line-button + .td-line-button {
+  margin-left: 10px;
+}
+.default-btn {
+  @include colorBtn($default);
+}
+
+.success-btn {
+  @include colorBtn($success);
+}
+
+.danger-btn {
+  @include colorBtn($danger);
+}
+
+.info-btn {
+  @include colorBtn($info);
+}
+.warn-btn {
+  @include colorBtn($warn);
+}
+
+.td-line-button {
+  font-size: 14px;
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  transition: 600ms ease all;
+  position: relative;
+  display: inline-block;
+
+  &:hover {
+    background: #fff;
+    &:before,
+    &:after {
+      width: 100%;
+      transition: 600ms ease all;
+    }
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    transition: 400ms ease all;
+  }
+
+  &::after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+  }
+  .is-disabled:hover {
+      background: red;
+    &:before,
+    &:after {
+      width: 100%;
+      transition: 600ms ease all;
+    }
+  }
+}
+
+.custom-button {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  color: #fff;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.td-line-button.is-round {
+  border-radius: 20px;
+  // padding: 12px 23px
+}
+
+.td-line-button.is-circle {
+  border-radius: 50%;
+  padding: 12px;
+}
+
+.td-button--medium {
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.td-button--mini,
+.td-button--small {
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.td-button--medium.is-round {
+  padding: 10px 20px;
+}
+
+.td-button--medium.is-circle {
+  padding: 10px;
+}
+
+.td-button--small,
+.td-button--small.is-round {
+  padding: 9px 15px;
+}
+
+.td-button--small.is-circle {
+  padding: 9px;
+}
+
+.td-button--mini,
+.td-button--mini.is-round {
+  padding: 7px 15px;
+}

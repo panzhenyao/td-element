@@ -3,129 +3,129 @@
     <h2 class="demo-title">Button 按钮</h2>
     <p class="demo-introduction">常用按钮介绍</p>
 
-    <orange-anchor>
-      <orange-anchor-link href="button-Simple" title="普通按钮" />
-      <orange-anchor-link href="button-Black" title="暗色按钮" />
-      <orange-anchor-link href="button-Line" title="线性按钮" />
-      <orange-anchor-link href="button-disabled" title="禁用" />
-      <orange-anchor-link href="button-Size" title="按钮尺寸" />
-      <orange-anchor-link href="api" title="API" />
-    </orange-anchor>
+    <td-anchor>
+      <td-anchor-link href="button-Simple" title="普通按钮" />
+      <td-anchor-link href="button-Black" title="暗色按钮" />
+      <td-anchor-link href="button-Line" title="线性按钮" />
+      <td-anchor-link href="button-disabled" title="禁用" />
+      <td-anchor-link href="button-Size" title="按钮尺寸" />
+      <td-anchor-link href="api" title="API" />
+    </td-anchor>
 
     <h3 class="demo-table-title" id="button-simple">基础用法</h3>
     <!-- 基础用法DEMO -->
-    <orange-demo-block :height="630" :title="'普通按钮'" id="button-Simple">
+    <td-demo-block :height="630" :title="'普通按钮'" id="button-Simple">
       <template v-slot:demo>
         <div class="codepadding">
-          <orange-button>Default</orange-button>
-          <orange-button type="success">Success</orange-button>
-          <orange-button type="primary">Primary</orange-button>
-          <orange-button type="danger">Danger</orange-button>
-          <orange-button type="warning">Warning</orange-button>
-          <orange-button type="info">info</orange-button>
-          <orange-button icon="org-icon-icon_search" type="primary"
-            >Search</orange-button
+          <td-button>Default</td-button>
+          <td-button type="success">Success</td-button>
+          <td-button type="primary">Primary</td-button>
+          <td-button type="danger">Danger</td-button>
+          <td-button type="warning">Warning</td-button>
+          <td-button type="info">info</td-button>
+          <td-button icon="org-icon-icon_search" type="primary"
+            >Search</td-button
           >
         </div>
         <div class="codepadding">
-          <orange-button plain>Default</orange-button>
-          <orange-button plain type="success">Success</orange-button>
-          <orange-button plain type="primary">Primary</orange-button>
-          <orange-button plain type="danger">Danger</orange-button>
-          <orange-button plain type="warning">Warning</orange-button>
-          <orange-button plain type="info">info</orange-button>
+          <td-button plain>Default</td-button>
+          <td-button plain type="success">Success</td-button>
+          <td-button plain type="primary">Primary</td-button>
+          <td-button plain type="danger">Danger</td-button>
+          <td-button plain type="warning">Warning</td-button>
+          <td-button plain type="info">info</td-button>
 
-          <orange-button plain icon="org-icon-icon_search" type="primary"
-            >Search</orange-button
+          <td-button plain icon="org-icon-icon_search" type="primary"
+            >Search</td-button
           >
         </div>
         <div class="codepadding">
-          <orange-button round>Default</orange-button>
-          <orange-button round type="success">Success</orange-button>
-          <orange-button round type="primary">Primary</orange-button>
-          <orange-button round type="danger">Danger</orange-button>
-          <orange-button round type="warning">Warning</orange-button>
-          <orange-button round type="info">info</orange-button>
+          <td-button round>Default</td-button>
+          <td-button round type="success">Success</td-button>
+          <td-button round type="primary">Primary</td-button>
+          <td-button round type="danger">Danger</td-button>
+          <td-button round type="warning">Warning</td-button>
+          <td-button round type="info">info</td-button>
 
-          <orange-button round icon="org-icon-icon_search" type="primary"
-            >Search</orange-button
+          <td-button round icon="org-icon-icon_search" type="primary"
+            >Search</td-button
           >
         </div>
         <div class="codepadding">
-          <orange-button circle icon="org-icon-react"></orange-button>
-          <orange-button
+          <td-button circle icon="org-icon-react"></td-button>
+          <td-button
             circle
             icon="org-icon-vue"
             type="primary"
-          ></orange-button>
-          <orange-button
+          ></td-button>
+          <td-button
             circle
             icon="org-icon-js"
             type="success"
-          ></orange-button>
-          <orange-button
+          ></td-button>
+          <td-button
             circle
             icon="org-icon-angular"
             type="danger"
-          ></orange-button>
-          <orange-button
+          ></td-button>
+          <td-button
             circle
             icon="org-icon-caishichang-"
             type="warning"
-          ></orange-button>
-          <orange-button
+          ></td-button>
+          <td-button
             circle
             icon="org-icon-icon_QRcode"
             type="info"
-          ></orange-button>
+          ></td-button>
         </div>
       </template>
       <template v-slot:code>
         <code class="html">{{ fCode(simple.code.html) }}</code>
       </template>
-    </orange-demo-block>
-    <orange-demo-block :height="150" :title="'暗色按钮'" id="button-Black">
+    </td-demo-block>
+    <td-demo-block :height="150" :title="'暗色按钮'" id="button-Black">
       <template v-slot:demo>
         <div class="codepadding" style="background: #000">
-          <orange-button isblack>Default</orange-button>
-          <orange-button isblack type="danger">Danger</orange-button>
+          <td-button isblack>Default</td-button>
+          <td-button isblack type="danger">Danger</td-button>
         </div>
       </template>
       <template v-slot:code>
         <code class="html">{{ fCode(black.code.html) }}</code>
       </template>
-    </orange-demo-block>
+    </td-demo-block>
     <!-- 线性按钮 -->
-    <orange-demo-block :height="168" :title="'线性按钮'" id="button-Line">
+    <td-demo-block :height="168" :title="'线性按钮'" id="button-Line">
       <template v-slot:demo>
-        <orange-line-button disabled>Default</orange-line-button>
-        <orange-line-button disabled type="success">Success</orange-line-button>
-        <orange-line-button disabled type="danger">Danger</orange-line-button>
-        <orange-line-button disabled type="warn">warn</orange-line-button>
-        <orange-line-button disabled type="info">info</orange-line-button>
+        <td-line-button disabled>Default</td-line-button>
+        <td-line-button disabled type="success">Success</td-line-button>
+        <td-line-button disabled type="danger">Danger</td-line-button>
+        <td-line-button disabled type="warn">warn</td-line-button>
+        <td-line-button disabled type="info">info</td-line-button>
       </template>
       <template v-slot:code>
         <code class="html">{{ fCode(line.code.html) }}</code>
       </template>
-    </orange-demo-block>
+    </td-demo-block>
     <!-- 禁用DEMO -->
-    <orange-demo-block :height="168" :title="'禁用'" id="button-disabled">
+    <td-demo-block :height="168" :title="'禁用'" id="button-disabled">
       <template v-slot:demo>
-        <orange-button disabled>Default</orange-button>
-        <orange-button disabled type="success">Success</orange-button>
-        <orange-button disabled type="primary">Primary</orange-button>
-        <orange-button disabled type="danger">Danger</orange-button>
-        <orange-button disabled icon="org-icon-icon_search" type="primary"
-          >Search</orange-button
+        <td-button disabled>Default</td-button>
+        <td-button disabled type="success">Success</td-button>
+        <td-button disabled type="primary">Primary</td-button>
+        <td-button disabled type="danger">Danger</td-button>
+        <td-button disabled icon="org-icon-icon_search" type="primary"
+          >Search</td-button
         >
       </template>
       <template v-slot:code>
         <code class="html">{{ fCode(disabled.code.html) }}</code>
       </template>
-    </orange-demo-block>
+    </td-demo-block>
 
     <!-- 按钮尺寸 -->
-    <orange-demo-block
+    <td-demo-block
       :height="250"
       :title="'按钮尺寸'"
       id="button-Size"
@@ -133,32 +133,31 @@
     >
       <template v-slot:demo>
         <div style="padding: 10p">
-          <orange-button size="medium">medium</orange-button>
-          <orange-button size="small">small</orange-button>
-          <orange-button size="mini">mini</orange-button>
+          <td-button size="medium">medium</td-button>
+          <td-button size="small">small</td-button>
+          <td-button size="mini">mini</td-button>
         </div>
 
         <div style="margin-top: 10px; padding: 10p">
-          <orange-line-button size="medium">medium</orange-line-button>
-          <orange-line-button size="small">small</orange-line-button>
-          <orange-line-button size="mini">mini</orange-line-button>
+          <td-line-button size="medium">medium</td-line-button>
+          <td-line-button size="small">small</td-line-button>
+          <td-line-button size="mini">mini</td-line-button>
         </div>
         <div style="margin-top: 10px; padding: 10px; background: #000">
-          <orange-button isblack size="medium">medium</orange-button>
-          <orange-button isblack size="small">small</orange-button>
-          <orange-button isblack size="mini">mini</orange-button>
+          <td-button isblack size="medium">medium</td-button>
+          <td-button isblack size="small">small</td-button>
+          <td-button isblack size="mini">mini</td-button>
         </div>
       </template>
       <template v-slot:code>
         <code class="html">{{ fCode(size.code.html) }}</code>
       </template>
-    </orange-demo-block>
+    </td-demo-block>
 
     <!-- API -->
     <div id="api">
       <h3 class="demo-table-title">API</h3>
       <P class="demo-table-introduction">属性说明如下：</P>
-      <orange-table-simple :data="api" :thead="thead" />
     </div>
   </div>
 </template>
@@ -173,33 +172,33 @@ export default {
       simple: {
         code: {
           html: `
-           <orange-button>Default</orange-button>
-          <orange-button type="success">Success</orange-button>
-          <orange-button type="primary">Primary</orange-button>
-          <orange-button type="danger">Danger</orange-button>
-          <orange-button type="warning">Warning</orange-button>
-          <orange-button type="info">info</orange-button>
-          <orange-button icon="org-icon-icon_search" type="primary">Search</orange-button>
-          <orange-button plain>Default</orange-button>
-          <orange-button plain type="success">Success</orange-button>
-          <orange-button plain type="primary">Primary</orange-button>
-          <orange-button plain type="danger">Danger</orange-button>
-          <orange-button plain type="warning">Warning</orange-button>
-          <orange-button plain type="info">info</orange-button>
-          <orange-button plain icon="org-icon-icon_search" type="primary">Search</orange-button>
-          <orange-button round>Default</orange-button>
-          <orange-button round type="success">Success</orange-button>
-          <orange-button round type="primary">Primary</orange-button>
-          <orange-button round type="danger">Danger</orange-button>
-          <orange-button round type="warning">Warning</orange-button>
-          <orange-button round type="info">info</orange-button>
-          <orange-button round icon="org-icon-icon_search" type="primary">Search</orange-button>
-          <orange-button circle icon="org-icon-react"></orange-button>
-          <orange-button circle icon="org-icon-vue" type="primary"></orange-button>
-          <orange-button circle icon="org-icon-js" type="success"></orange-button>
-          <orange-button circle icon="org-icon-angular" type="danger"></orange-button>
-          <orange-button circle icon="org-icon-caishichang-" type="warning"></orange-button>
-          <orange-button circle icon="org-icon-icon_QRcode" type="info"></orange-button>
+           <td-button>Default</td-button>
+          <td-button type="success">Success</td-button>
+          <td-button type="primary">Primary</td-button>
+          <td-button type="danger">Danger</td-button>
+          <td-button type="warning">Warning</td-button>
+          <td-button type="info">info</td-button>
+          <td-button icon="org-icon-icon_search" type="primary">Search</td-button>
+          <td-button plain>Default</td-button>
+          <td-button plain type="success">Success</td-button>
+          <td-button plain type="primary">Primary</td-button>
+          <td-button plain type="danger">Danger</td-button>
+          <td-button plain type="warning">Warning</td-button>
+          <td-button plain type="info">info</td-button>
+          <td-button plain icon="org-icon-icon_search" type="primary">Search</td-button>
+          <td-button round>Default</td-button>
+          <td-button round type="success">Success</td-button>
+          <td-button round type="primary">Primary</td-button>
+          <td-button round type="danger">Danger</td-button>
+          <td-button round type="warning">Warning</td-button>
+          <td-button round type="info">info</td-button>
+          <td-button round icon="org-icon-icon_search" type="primary">Search</td-button>
+          <td-button circle icon="org-icon-react"></td-button>
+          <td-button circle icon="org-icon-vue" type="primary"></td-button>
+          <td-button circle icon="org-icon-js" type="success"></td-button>
+          <td-button circle icon="org-icon-angular" type="danger"></td-button>
+          <td-button circle icon="org-icon-caishichang-" type="warning"></td-button>
+          <td-button circle icon="org-icon-icon_QRcode" type="info"></td-button>
           `,
         },
       },
@@ -207,8 +206,8 @@ export default {
         code: {
           html: `
          <div class="codepadding" style="background:#000;">
-          <orange-button isblack>Default</orange-button>
-          <orange-button isblack type="danger">Danger</orange-button>
+          <td-button isblack>Default</td-button>
+          <td-button isblack type="danger">Danger</td-button>
         </div>
           `,
         },
@@ -216,37 +215,37 @@ export default {
       line: {
         code: {
           html: `
-           <orange-line-button disabled>Default</orange-line-button>
-        <orange-line-button disabled type="success">Success</orange-line-button>
-        <orange-line-button disabled type="danger">Danger</orange-line-button>
-        <orange-line-button disabled type="warn">warn</orange-line-button>
-        <orange-line-button disabled type="info">info</orange-line-button>
+           <td-line-button disabled>Default</td-line-button>
+        <td-line-button disabled type="success">Success</td-line-button>
+        <td-line-button disabled type="danger">Danger</td-line-button>
+        <td-line-button disabled type="warn">warn</td-line-button>
+        <td-line-button disabled type="info">info</td-line-button>
           `,
         },
       },
       disabled: {
         code: {
           html: `
-          <orange-button disabled>Default</orange-button>
-        <orange-button disabled type="success">Success</orange-button>
-        <orange-button disabled type="primary">Primary</orange-button>
-        <orange-button disabled type="danger">Danger</orange-button>
-        <orange-button disabled icon="org-icon-icon_search" type="primary">Search</orange-button>
+          <td-button disabled>Default</td-button>
+        <td-button disabled type="success">Success</td-button>
+        <td-button disabled type="primary">Primary</td-button>
+        <td-button disabled type="danger">Danger</td-button>
+        <td-button disabled icon="org-icon-icon_search" type="primary">Search</td-button>
           `,
         },
       },
       size: {
         code: {
           html: `
-          <orange-button size="medium">medium</orange-button>
-          <orange-button size="small">small</orange-button>
-          <orange-button size="mini">mini</orange-button>
-          <orange-line-button  size="medium">medium</orange-line-button>
-          <orange-line-button  size="small">small</orange-line-button>
-          <orange-line-button  size="mini">mini</orange-line-button>
-          <orange-button isblack size="medium">medium</orange-button>
-          <orange-button isblack size="small">small</orange-button>
-          <orange-button isblack size="mini">mini</orange-button>
+          <td-button size="medium">medium</td-button>
+          <td-button size="small">small</td-button>
+          <td-button size="mini">mini</td-button>
+          <td-line-button  size="medium">medium</td-line-button>
+          <td-line-button  size="small">small</td-line-button>
+          <td-line-button  size="mini">mini</td-line-button>
+          <td-button isblack size="medium">medium</td-button>
+          <td-button isblack size="small">small</td-button>
+          <td-button isblack size="mini">mini</td-button>
           `,
         },
       },

@@ -1,0 +1,44 @@
+{
+  "globals": {
+    "ga": true,
+    "chrome": true
+  },
+  "parser": "vue-eslint-parser",
+  "plugins": [
+    "vue",
+    "json",
+    "html"
+  ],
+  "extends": [
+    "elemefe",
+  ],
+  "rules": {
+    "no-restricted-globals": [
+      "error",
+      "event",
+      "fdescribe"
+    ],
+    "vue/no-unused-vars": "off", //不知道为什么不加这个有时候还是会提示声明了未使用的变量。就只能加上了
+    "no-unused-vars": "off", // 禁止有声明了却未使用的变量。暂时注释掉也会报错，所以注掉
+    "no-unused-components": 0, // 禁止有注册了却未使用的组件，原因同上
+    "no-useless-escape": "off", //禁用不必要的转义符，在正则表达式时有用
+    "vue/valid-template-root": "off", //定义组件时<template></template>中间可以没有任何元素
+    "vue/no-unused-components": 0, // 禁止有注册了却未使用的组件
+    "no-empty": "off", //允许空块语句
+    "no-mixed-spaces-and-tabs": "off",
+    "space-before-function-paren": "off",
+    "quotes": "off",
+    "semi": "off",
+    "eol-last": "off",
+    "no-multiple-empty-lines": "off",
+    "comma-dangle": "off"
+  },
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "sourceType": "module",
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  }
+}

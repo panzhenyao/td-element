@@ -2,9 +2,9 @@
   <div class="home">
     <div class="header">
       <div class="container">
-        <span class="title">Orange-Collect</span>
+        <span class="title">Td-Collect</span>
         <i
-          class="iconfont org-icon-caishichang-"
+          class="td-icon-caishichang-"
           style="margin: 0 20px; font-size: 32px"
         ></i>
       </div>

@@ -14,9 +14,9 @@ npm run build
 git init
 git add .
 git commit -m 'deploy'
-
+# git@github.com:panzhenyao/td-element.git
 # 如果发布到 https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
+ git push -f git@github.com:panzhenyao/td-element.git main
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 git pull

@@ -1,16 +1,17 @@
 <template>
-  <div :class="[{'orange-anchor':!customize,'orange-anchor-left':position == 'left'},[anchorClass]]">
-    <div class="orange-anchor-ink">
-      <span :class="{'visible':linkBallShow}" :style="{top:linkBallTop + 'px'}" class="orange-anchor-ink-ball"></span>
+  <div :class="[{'td-anchor':!customize,'td-anchor-left':position == 'left'},[anchorClass]]">
+    <div class="td-anchor-ink">
+      <span :class="{'visible':linkBallShow}" :style="{top:linkBallTop + 'px'}" class="td-anchor-ink-ball"></span>
     </div>
-    <div class="orange-anchor-box">
+    <div class="td-anchor-box">
       <slot></slot>
     </div>
   </div>
 </template>
 <script>
+import { PRE_MARK } from "../../settings";
 export default {
-  name: 'anchor',
+  name: `${PRE_MARK}Anchor`,
   props: {
     target: {
       type: String,
@@ -120,78 +121,12 @@ export default {
     activeTitle() {
       for (let i = 0; i < this.$slots.default.length; i++) {
         if (this.index === i) {
-          this.$slots.default[i].elm.classList.add('orange-anchor-link-active')
+          this.$slots.default[i].elm.classList.add('td-anchor-link-active')
         } else {
-          this.$slots.default[i].elm.classList.remove('orange-anchor-link-active')
+          this.$slots.default[i].elm.classList.remove('td-anchor-link-active')
         }
       }
     }
   }
 }
 </script>
-<style lang="scss" scoped>
-$--color-primary: #2cbfbe !default;
-div .orange-anchor {
-  z-index: 99;
-  position: fixed;
-  right: 10px;
-  top: 135px;
-  width: 150px;
-  .orange-anchor-ink {
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    &::before {
-      content: ' ';
-      position: relative;
-      width: 2px;
-      height: 100%;
-      display: block;
-      background-color: #e8e8e8;
-      margin: 0 auto;
-    }
-    .orange-anchor-ink-ball {
-      opacity: 0;
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      border-radius: 8px;
-      // border: 2px solid $--color-primary;
-      border: 2px solid mix(#000, $--color-primary, 1);
-      background-color: #fff;
-      left: 50%;
-      transition: all 0.3s ease-in-out;
-      -webkit-transform: translateX(-50%);
-      transform: translateX(-50%);
-    }
-  }
-  .orange-anchor-box {
-    font-family: 'Chinese Quote', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-      'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue',
-      Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-      'Segoe UI Symbol';
-    font-size: 14px;
-    font-variant: tabular-nums;
-    line-height: 1.5;
-    color: rgba(0, 0, 0, 0.65);
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    position: relative;
-    padding-left: 2px;
-  }
-}
-.orange-anchor-left {
-  right: auto;
-  left: 10px;
-  .orange-anchor-ink {
-    right: 0;
-    left: auto;
-  }
-  .orange-anchor-box {
-    text-align: right;
-  }
-}
-</style>

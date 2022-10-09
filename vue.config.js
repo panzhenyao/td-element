@@ -1,5 +1,4 @@
-const NODE_ENV = process.env.NODE_ENV; // lib npm组件, 开发环境 development,
-// const components = require("./build/components.json");
+// const NODE_ENV = process.env.NODE_ENV; // lib npm组件, 开发环境 development,
 
 const baseConfig = {
   chainWebpack: (config) => {
@@ -39,17 +38,5 @@ const devConfig = {
   outputDir: "docs",
   ...baseConfig,
 };
-const libConfig = {
-  configureWebpack: {
-    entry: "build/index.js",
-    output: {
-      filename: "[name].js",
-      libraryTarget: "commonjs2",
-    },
-  },
-  outputDir: "lib",
-  productionSourceMap: false,
-  ...baseConfig,
-};
 
-module.exports = NODE_ENV === "lib" ? libConfig : devConfig;
+module.exports = devConfig

@@ -1,7 +1,7 @@
 
 import Vue from 'vue'
 
-//格式化代码,去除行前空格
+// 格式化代码,去除行前空格
 Vue.prototype.fCode = function (code) {
   let code_list = []
   code.trim().split('\n').forEach(function (v) {
@@ -24,14 +24,14 @@ Vue.prototype.fCode = function (code) {
   return fcode
 }
 
-//数组去重
+// 数组去重
 Vue.prototype.unique = function (array) {
   var res = [];
   for (var i = 0, len = array.length; i < len; i++) {
-      var current = array[i];
-      if (res.indexOf(current) === -1) {
-          res.push(current)
-      }
+    var current = array[i];
+    if (res.indexOf(current) === -1) {
+      res.push(current)
+    }
   }
   return res;
 }

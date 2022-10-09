@@ -1,13 +1,14 @@
 <template>
-  <div :class="{'orange_anchor_link':!($slots.default),'orange_anchor_link-left':$parent.position == 'left'}"
+  <div :class="{'td_anchor_link':!($slots.default),'td_anchor_link-left':$parent.position == 'left'}"
     :id="'link-' + hrefTotal + '-' + hrefHeight" :title="title" @click="jump">
     <span v-if="!($slots.default)">{{title}}</span>
     <slot></slot>
   </div>
 </template>
 <script>
+import { PRE_MARK } from "../../settings";
 export default {
-  name: 'anchorLink',
+  name: `${PRE_MARK}AnchorLink`,
   props: {
     href: {
       type: String,
@@ -111,27 +112,3 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-$--color-primary: #2cbfbe !default;
-.orange_anchor_link {
-  cursor: pointer;
-  display: block;
-  position: relative;
-  transition: all 0.3s;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding: 7px 0 7px 16px;
-  line-height: 1.143;
-  font-size: 12px;
-  &:hover {
-    color: $--color-primary;
-  }
-}
-.orange_anchor_link-active {
-  color: $--color-primary !important;
-}
-.orange_anchor_link-left {
-  padding: 7px 16px 7px 0;
-}
-</style>

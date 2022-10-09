@@ -29,7 +29,7 @@
     <p class="demo-introduction">
       github代码仓库地址
       <a href="https://github.com/czkm/Orange-Collect" target="https://github.com/czkm/Orange-Collect">
-        <i class="iconfont org-icon-huaban88" style="margin: 0 20px; font-size: 26px"></i>
+        <i class="td-icon-huaban88" style="margin: 0 20px; font-size: 26px"></i>
       </a>
     </p>
 

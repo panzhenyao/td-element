@@ -1,0 +1,33 @@
+/* font path
+-------------------------- */
+
+/* Transition
+-------------------------- */
+$--color-transition-base: color .2s cubic-bezier(.645,.045,.355,1) !default;
+
+
+/* Size font
+-------------------------- */
+$--default-font-size-1: 14px;
+
+/* Color font
+-------------------------- */
+$--default-font-color-1: #fff;
+$--primary-font-color-1: #3d3e55;
+$--normal-font-color-1: #7f7f95;
+$--secondary-font-color-1: #c7cddf;
+/* Color fill
+-------------------------- */
+$--default-fill-color-1: #fff;
+$--main-fill-color-1: #6273e7;
+$--secondary-fill-color-2: #fed45f;
+$--secondary-fill-color-3: #fe685f;
+$--secondary-fill-color-4: #878aff;
+$--secondary-fill-color-5: #77bbff;
+$--secondary-fill-color-6: #76e0e4;
+$--secondary-fill-color-7: #67c23a;
+/* Border
+-------------------------- */
+$--border-base: 1px solid $--secondary-font-color-1;
+/* Button
+-------------------------- */

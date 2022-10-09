@@ -2,12 +2,12 @@
   <div
     :style="{ opacity: show ? '1' : '0' }"
     @click="backTop"
-    class="orange_backtop"
+    class="td_backtop"
   >
-    <div class="orange_backtop-customize-content">
+    <div class="td_backtop-customize-content">
       <slot></slot>
     </div>
-    <div class="orange_backtop-content" v-if="!slotShow">
+    <div class="td_backtop-content" v-if="!slotShow">
       <div>
         <i class="iconfont org-icon-arrow-up"></i>
       </div>
@@ -15,8 +15,9 @@
   </div>
 </template>
 <script>
+import { PRE_MARK } from "../../settings";
 export default {
-  name: 'backTop',
+  name: `${PRE_MARK}BackTop`,
   props: {
     target: {
       type: String,
@@ -111,46 +112,3 @@ export default {
   },
 }
 </script>
-<style lang="scss" scoped>
-.orange_backtop {
-  transition: opacity 0.3s;
-  .orange_backtop-content {
-    cursor: pointer;
-    z-index: 101;
-    position: fixed;
-    margin: 0;
-    padding: 0;
-    right: 100px;
-    bottom: 50px;
-    width: 40px;
-    height: 40px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    color: rgba(0, 0, 0, 0.65);
-    font-size: 14px;
-    font-variant: tabular-nums;
-    line-height: 1.5;
-    list-style: none;
-    -webkit-font-feature-settings: 'tnum';
-    font-feature-settings: 'tnum';
-    div {
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
-      overflow: hidden;
-      color: #fff;
-      text-align: center;
-      background-color: #8888;
-      border-radius: 20px;
-      -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-      &:hover {
-        background-color: #3338;
-      }
-      i {
-        font-size: 22px;
-      }
-    }
-  }
-}
-</style>
