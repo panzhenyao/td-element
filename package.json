@@ -12,7 +12,6 @@
     "build": "vue-cli-service build",
     "clean": "rimraf lib && rimraf packages/*/lib",
     "lint": "eslint src/**/* packages/**/* build/**/* --quiet",
-    "deploy": "bash deploy.sh",
     "dist": "npm run clean && npm run build:file && npm run lint && webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js && npm run build:theme"
   },
   "repository": {

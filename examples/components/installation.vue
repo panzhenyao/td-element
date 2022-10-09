@@ -38,30 +38,24 @@
     <p class="demo-introduction">
       推荐使用 npm 的方式安装，它能更好地和 webpack 打包工具配合使用。
     </p>
-    <div class="demo-code-block">npm i orange_collect</div>
+    <div class="demo-code-block">npm i td-element -s</div>
 
     <!-- 快速上手 -->
     <h3 class="demo-table-title">快速上手</h3>
     <p class="demo-introduction">
-      你可以在 main.js 中引入整个 orange_collect。
+      你可以在 main.js 中引入整个 td-element。
     </p>
     <div class="demo-code-block">
-      <p>import orange_collect from 'orange_collect'</p>
-      <p>import 'orange_collect/lib/orange_collect.css'</p>
+      <p>import tdElement from 'td-element'</p>
+      <p>import 'td-element/lib/theme-chalk/index.css'</p>
 
-      <p style="margin-top: 20px">Vue.use(orange_collect);</p>
-    </div>
-
-    <!-- 常用动效 -->
-    <h3 class="demo-table-title">常用动效</h3>
-    <div class="demo-code-block">
-      <p>transition: all 0.2s linear;</p>
+      <p style="margin-top: 20px">Vue.use(tdElement);</p>
     </div>
 
     <!-- 开始使用 -->
     <h3 class="demo-table-title">开始使用</h3>
     <p class="demo-introduction">
-      至此，一个基于 Vue 安装了 orange_collect插件
+      至此，一个基于 Vue 安装了 td-element插件
       的开发环境已经搭建完毕。各个组件的使用方法请参阅它们各自的文档。
     </p>
   </div>
