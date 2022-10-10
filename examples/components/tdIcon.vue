@@ -5,11 +5,11 @@
     <div class="demo-tip">
       <p>该项目使用 iconfont 图标库</p>
       <p>
-        <a
+        <!-- <a
           href="https://www.iconfont.cn/manage/index?manage_type=myprojects&projectId=1915698"
           target="_blank"
           >https://www.iconfont.cn/manage/index?manage_type=myprojects&projectId=1915698</a
-        >
+        > -->
       </p>
     </div>
 
@@ -19,7 +19,7 @@
       <!-- 使用方法DEMO -->
       <td-demo-block
         :height="294"
-        :introduction="'直接通过设置类名为 iconfont，td-icon- 来使用即可。例如：'"
+        :introduction="'直接通过设置类名为 td-icon- 来使用即可。例如：'"
         :title="'使用方法'"
       >
         <template v-slot:demo>

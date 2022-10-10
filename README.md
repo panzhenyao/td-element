@@ -1,24 +1,23 @@
-# td-element
+> A Vue.js 2.0 UI Toolkit for Web.
 
-## Project setup
-```
-npm install
-```
+Element will stay with Vue 2.x 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+## Install
+```shell
+npm install td-element -S
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+## Quick Start
+``` javascript
+import Vue from 'vue'
+import TdElement from 'td-element'
+import 'td-element/lib/theme-chalk/index.css'
+Vue.use(TdElement)
+
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Browser Support
+Modern browsers and Internet Explorer 10+.
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

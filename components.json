@@ -4,5 +4,6 @@
   "anchorLink": "./packages/anchorLink/index.js",
   "backTop": "./packages/backTop/index.js",
   "lineButton": "./packages/lineButton/index.js",
-  "demoBlock": "./packages/demoBlock/index.js"
+  "demoBlock": "./packages/demoBlock/index.js",
+  "tableSimple": "./packages/tableSimple/index.js"
 }

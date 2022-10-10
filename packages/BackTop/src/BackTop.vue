@@ -9,7 +9,7 @@
     </div>
     <div class="td_backtop-content" v-if="!slotShow">
       <div>
-        <i class="iconfont org-icon-arrow-up"></i>
+        <i class="td-icon-arrow-up"></i>
       </div>
     </div>
   </div>

@@ -31,6 +31,19 @@
   -ms-user-select: none;
   font-size: 14px;
   border-radius: 4px;
+  &.is-round {
+    border-radius: 20px;
+    padding: 12px 23px;
+    &.is-circle {
+      border-radius: 20px;
+      padding: 5px 23px;
+    }
+  }
+  &.is-circle {
+    border-radius: 50%;
+    padding: 5px 8px;
+    min-width: unset;
+  }
   &.td-button--mini {
     font-size: 12px;
     height: 28px;
@@ -123,6 +136,76 @@
     }
   }
 
+  &.td-button--success {
+    color: $--default-font-color-1;
+    background-color: $--secondary-fill-color-7;
+    border-color: $--secondary-fill-color-7;
+    &:hover {
+      color: $--default-font-color-1;
+      background-color: #76de42;
+      border-color: #76de42;
+    }
+
+    &:active {
+      color: $--default-font-color-1;
+      background-color: #61b837;
+      border-color: #61b837;
+    }
+    &.is-disabled {
+      @include disabled-button;
+      color: $--default-font-color-1;
+      border-color: $--secondary-fill-color-7;
+      background-color: $--secondary-fill-color-7;
+      opacity: 0.3;
+    }
+  }
+
+  &.td-button--warn {
+    color: $--default-font-color-1;
+    background-color: $--secondary-fill-color-2;
+    border-color: $--secondary-fill-color-2;
+    &:hover {
+      color: $--default-font-color-1;
+      background-color: #ffe38f;
+      border-color: #ffe38f;
+    }
+
+    &:active {
+      color: $--default-font-color-1;
+      background-color: #e8c257;
+      border-color: #e8c257;
+    }
+    &.is-disabled {
+      @include disabled-button;
+      color: $--default-font-color-1;
+      border-color: $--secondary-fill-color-2;
+      background-color: $--secondary-fill-color-2;
+      opacity: 0.3;
+    }
+  }
+  &.td-button--info {
+    color: $--default-font-color-1;
+    background-color: $--normal-font-color-1;
+    border-color: $--normal-font-color-1;
+    &:hover {
+      color: $--default-font-color-1;
+      background-color: #AEAECC;
+      border-color: #AEAECC;
+    }
+
+    &:active {
+      color: $--default-font-color-1;
+      background-color: #7E7E94;
+      border-color: #7E7E94;
+    }
+    &.is-disabled {
+      @include disabled-button;
+      color: $--default-font-color-1;
+      border-color: $--normal-font-color-1;
+      background-color: $--normal-font-color-1;
+      opacity: 0.3;
+    }
+  }
   + .td-button {
     margin-left: 20px;
   }

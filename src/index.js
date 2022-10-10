@@ -6,6 +6,7 @@ import AnchorLink from '../packages/anchorLink/index.js';
 import BackTop from '../packages/backTop/index.js';
 import LineButton from '../packages/lineButton/index.js';
 import DemoBlock from '../packages/demoBlock/index.js';
+import TableSimple from '../packages/tableSimple/index.js';
 
 const components = [
   Button,
@@ -14,6 +15,7 @@ const components = [
   BackTop,
   LineButton,
   DemoBlock,
+  TableSimple,
 ];
 
 const install = function(Vue) {
@@ -28,12 +30,13 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '0.1.5',
+  version: '0.1.6',
   install,
   Button,
   Anchor,
   AnchorLink,
   BackTop,
   LineButton,
-  DemoBlock
+  DemoBlock,
+  TableSimple
 };

@@ -1,4 +1,7 @@
-$--color-primary: #2cbfbe !default;
+@charset "UTF-8";
+@import "./common/var.scss";
+
+$--color-primary:  $--main-fill-color-1 !default;
 .td_anchor_link {
   cursor: pointer;
   display: block;

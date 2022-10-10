@@ -7,6 +7,10 @@
       },
       {
         'is-visited': isVisited
+      },
+      {
+        'is-round': round,
+        'is-circle': circle
       }
     ]">
     <i class="el-icon-loading" v-if="loading"></i>
@@ -17,9 +21,9 @@
   </button>
 </template>
 <script>
-/* eslint-disable */
+import { PRE_MARK } from '../../settings'
 export default {
-  name: 'TdButton',
+  name: `${PRE_MARK}Button`,
   inject: {
     elForm: {
       default: ''
@@ -48,10 +52,9 @@ export default {
     },
     loading: Boolean,
     disabled: Boolean,
-    // plain: Boolean,
     autofocus: Boolean,
-    // round: Boolean,
-    // circle: Boolean,
+    round: Boolean,
+    circle: Boolean,
     visitedState: Boolean
   },
   data() {
@@ -76,7 +79,7 @@ export default {
     handleClick(evt) {
       this.$emit('click', evt)
       let target = evt.target
-      if (target.nodeName == 'SPAN') {
+      if (target.nodeName === 'SPAN') {
         target = evt.target.parentNode
       }
       this.useTypeEffect()

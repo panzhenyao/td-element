@@ -46,10 +46,10 @@
       你可以在 main.js 中引入整个 td-element。
     </p>
     <div class="demo-code-block">
-      <p>import tdElement from 'td-element'</p>
+      <p>import TdElement from 'td-element'</p>
       <p>import 'td-element/lib/theme-chalk/index.css'</p>
 
-      <p style="margin-top: 20px">Vue.use(tdElement);</p>
+      <p style="margin-top: 20px">Vue.use(TdElement);</p>
     </div>
 
     <!-- 开始使用 -->

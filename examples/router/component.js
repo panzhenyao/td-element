@@ -1,6 +1,6 @@
 import Installation from '../components/installation'
 import Button from '../components/Button'
-import IconDemo from '../components/orangeIcon.vue'
+import IconDemo from '../components/tdIcon.vue'
 
 export default [
   {

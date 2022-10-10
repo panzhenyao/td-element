@@ -2,11 +2,8 @@
   <div class="home">
     <div class="header">
       <div class="container">
-        <span class="title">Td-Collect</span>
-        <i
-          class="td-icon-caishichang-"
-          style="margin: 0 20px; font-size: 32px"
-        ></i>
+        <span class="title">Td-Element</span>
+        <i class="td-icon-caishichang-" style="margin: 0 20px; font-size: 32px"></i>
       </div>
     </div>
     <div class="main">
@@ -15,20 +12,11 @@
           <li :key="item_1.title" class="nav-item" v-for="item_1 in ul_data">
             <a>{{ item_1.title }}</a>
             <ul class="pure-menu-list" v-if="item_1.li_data.length != 0">
-              <li
-                :key="item_2.path"
-                class="nav-item"
-                v-for="item_2 in item_1.li_data"
-              >
+              <li :key="item_2.path" class="nav-item" v-for="item_2 in item_1.li_data">
                 <div class="nav-group__title" v-if="item_2.group">
                   {{ item_2.group }}
                 </div>
-                <a
-                  :class="{ active: active == item_2.id }"
-                  :href="item_2.path"
-                  @click="active = item_2.id"
-                  >{{ item_2.name }}</a
-                >
+                <a :class="{ active: active == item_2.id }" :href="item_2.path" @click="active = item_2.id">{{ item_2.name }}</a>
               </li>
             </ul>
           </li>
@@ -52,22 +40,27 @@ export default {
           title: '开发指南',
           li_data: [
             { id: -1, name: '安装/快速上手', path: '#/component/installation' },
-            { id: -2, name: 'Icon 图标', path: '#/component/icon' },
-          ],
+            { id: -2, name: 'Icon 图标', path: '#/component/icon' }
+          ]
         },
         {
           title: '组件',
           li_data: [
             {
               id: '001',
-              group: '按钮',
+              group: 'Basic',
               name: 'Button 按钮',
-              path: '#/component/button',
-            },
-          ],
-        },
+              path: '#/component/button'
+            }
+            // {
+            //   id: "002",
+            //   name: "Collect 收集",
+            //   path: "#/component/button-collect"
+            // },
+          ]
+        }
       ],
-      sidebarHover: false,
+      sidebarHover: false
     }
   },
   watch: {
@@ -75,7 +68,7 @@ export default {
       if (from.path !== to.path) {
         document.documentElement.scrollTop = 0
       }
-    },
+    }
   },
   mounted() {
     switch (this.$router.history.current.fullPath) {
@@ -90,7 +83,7 @@ export default {
         break
     }
   },
-  methods: {},
+  methods: {}
 }
 </script>
 <style lang="scss" scoped>

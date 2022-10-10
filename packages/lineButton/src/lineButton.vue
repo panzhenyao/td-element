@@ -6,6 +6,7 @@
     class="td-line-button"
     @click="handleClick"
     :autofocus="autofocus"
+    :disabled="buttonDisabled"
     :class="[
       type ?  `${type}-btn`:'' ,
       buttonSize ? 'td-button--' + buttonSize : '',
