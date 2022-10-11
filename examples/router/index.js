@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../components/Home'
+import Home from '@/views/Home/index.vue'
 
+// 其它页面
+import views from './views'
 // 组件
-import component from './component'
+import components from './components'
 
 Vue.use(VueRouter)
 
@@ -12,9 +14,10 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home,
-    redirect: '/component/installation',
+    redirect: '/views/installation',
     children: [
-      ...component
+      ...views,
+      ...components
     ]
   },
 ]

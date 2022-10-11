@@ -2,7 +2,7 @@
   <div class="content-box">
     <h2 class="demo-title">Button 按钮</h2>
     <p class="demo-introduction">常用按钮介绍</p>
-
+    <!-- 锚点 -->
     <td-anchor>
       <td-anchor-link href="button-Simple" title="普通按钮" />
       <td-anchor-link href="button-Line" title="线性按钮" />
@@ -14,7 +14,7 @@
     <h3 class="demo-table-title" id="button-simple">基础用法</h3>
 
     <!-- 基础用法DEMO -->
-    <td-demo-block :height="310" :title="'普通按钮'" id="button-Simple">
+    <td-demo-block :height="250" :title="'普通按钮'" id="button-Simple">
       <template v-slot:demo>
         <div class="codepadding">
           <td-button>Default</td-button>
@@ -27,10 +27,10 @@
         <div class="codepadding">
           <td-button>Default</td-button>
           <td-button round type="primary">Primary</td-button>
-          <td-button circle icon="td-icon-icon_search" type="primary"></td-button>
+          <td-button circle icon="td-icon-search" type="primary"></td-button>
         </div>
         <div class="codepadding">
-          <td-button icon="td-icon-icon_search">Default</td-button>
+          <td-button icon="td-icon-search">Default</td-button>
         </div>
       </template>
       <template v-slot:code>
@@ -39,7 +39,7 @@
     </td-demo-block>
 
     <!-- 线性按钮 -->
-    <td-demo-block :height="300" :title="'线性按钮'" id="button-Line">
+    <td-demo-block :height="200" :title="'线性按钮'" id="button-Line">
       <template v-slot:demo>
         <div class="codepadding">
           <td-line-button>Default</td-line-button>
@@ -61,13 +61,13 @@
     </td-demo-block>
 
     <!-- 禁用DEMO -->
-    <td-demo-block :height="240" :title="'禁用'" id="button-disabled">
+    <td-demo-block :height="190" :title="'禁用'" id="button-disabled">
       <template v-slot:demo>
         <div class="codepadding">
           <td-button disabled>Default</td-button>
           <td-button disabled type="primary">Primary</td-button>
           <td-button disabled type="danger">Danger</td-button>
-          <td-button disabled icon="td-icon-icon_search" type="primary">Search</td-button>
+          <td-button disabled icon="td-icon-search" type="primary">Search</td-button>
         </div>
         <div class="codepadding">
           <td-line-button disabled>Default</td-line-button>
@@ -81,7 +81,7 @@
     </td-demo-block>
 
     <!-- 按钮尺寸 -->
-    <td-demo-block :height="200" :title="'按钮尺寸'" id="button-Size" introduction="自定义修改颜色，其type必须设置为customize">
+    <td-demo-block :height="190" :title="'按钮尺寸'" id="button-Size" introduction="自定义修改颜色，其type必须设置为customize">
       <template v-slot:demo>
         <div style="padding: 10p">
           <td-button size="medium">medium</td-button>
@@ -127,16 +127,16 @@ export default {
           
           <td-button>Default</td-button>
           <td-button round type="primary">Primary</td-button>
-          <td-button circle icon="td-icon-icon_search" type="primary"></td-button>
-          
-          <td-button icon="td-icon-icon_search">Default</td-button>
+          <td-button circle icon="td-icon-search" type="primary"></td-button>
+
+          <td-button icon="td-icon-search">Default</td-button>
           `
         }
       },
       line: {
         code: {
           html: `
-           <td-line-button>Default</td-line-button>
+        <td-line-button>Default</td-line-button>
         <td-line-button type="success">Success</td-line-button>
         <td-line-button type="danger">Danger</td-line-button>
         <td-line-button type="warn">warn</td-line-button>
@@ -168,6 +168,7 @@ export default {
           <td-button size="medium">medium</td-button>
           <td-button size="small">small</td-button>
           <td-button size="mini">mini</td-button>
+          
           <td-line-button size="medium">medium</td-line-button>
           <td-line-button size="small">small</td-line-button>
           <td-line-button size="mini">mini</td-line-button>

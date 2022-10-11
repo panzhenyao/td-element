@@ -1,10 +1,17 @@
 > A Vue.js 2.0 UI Toolkit for Web.
 
-Element will stay with Vue 2.x 
+Element will stay with [Vue 2.x](https://cli.vuejs.org/config/) 
 
 ## Install
 ```shell
-npm install td-element -S
+npm config set registry http://office.tiandaai.com:10038/repository/td-npm-group
+
+npm install td-element --save
+```
+
+## unInstall
+```shell
+npm uninstall td-element
 ```
 
 ## Quick Start
@@ -19,5 +26,3 @@ Vue.use(TdElement)
 ## Browser Support
 Modern browsers and Internet Explorer 10+.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

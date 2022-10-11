@@ -1,10 +1,10 @@
 {
   "name": "td-element",
-  "version": "0.1.7",
-  "private": false,
+  "version": "0.1.12",
   "description": "Collect some useful components",
-  "keyword": "Company Components",
-  "main": "lib/td-element.common.js",
+  "author": {
+    "name": "panzhenyao"
+  },
   "scripts": {
     "build:file": "node build/bin/iconInit.js & node build/bin/build-entry.js & node build/bin/version.js",
     "build:theme": "node build/bin/gen-cssfile && gulp build --gulpfile packages/theme-chalk/gulpfile.js && cp-cli packages/theme-chalk/lib lib/theme-chalk",
@@ -14,10 +14,19 @@
     "lint": "eslint src/**/* packages/**/* build/**/* --quiet",
     "dist": "npm run clean && npm run build:file && npm run lint && webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js && npm run build:theme"
   },
+  "keyword": "td-element",
+  "files": [
+    "lib",
+    "src",
+    "packages"
+  ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:panzhenyao/td-element.git"
+    "url": "git@gitee.com:tiandaai/td-element.git"
   },
+  "main": "lib/td-element.common.js",
+  "unpkg": "lib/index.js",
+  "style": "lib/theme-chalk/index.css",
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "2.6.14",
@@ -69,5 +78,6 @@
       "parser": "babel-eslint"
     },
     "rules": {}
-  }
+  },
+  "license": "MIT"
 }
