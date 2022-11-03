@@ -1,0 +1,68 @@
+@import "config";
+
+/* BEM support Func
+ -------------------------- */
+
+/* scss 函数说明
+ * # str-slice(string, start, end) : 字符串截取
+ *   从 string 中截取子字符串，通过 start-at 和 end-at 设置始末位置，未指定结束索引值则默认截取到字符串末尾;
+ * 
+ * # inspect(expression) : 断电函数
+ *   Inspect(...)表达式中的内容如果是正常会返回对应的内容，如果发生错误则会弹出一个错误提示。
+ */
+
+ /*
+  * 选择类名中的目标字符串
+  */
+@function selectorToString($selector) {
+  $selector: inspect($selector);
+  $selector: str-slice($selector, 2, -2);
+  @return $selector;
+}
+
+/*
+ * 包含--修饰类型的class判断
+ */
+@function containsModifier($selector) {
+  $selector: selectorToString($selector);
+
+  @if str-index($selector, $modifier-separator) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+/*
+ * 包含is类型的class判断
+ */
+@function containWhenFlag($selector) {
+  $selector: selectorToString($selector);
+
+  @if str-index($selector, "." + $state-prefix) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+/*
+ * 包含伪类的判断
+ */
+@function containPseudoClass($selector) {
+  $selector: selectorToString($selector);
+
+  @if str-index($selector, ":") {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+/*
+ * 命中所有特殊嵌套规则
+ */
+@function hitAllSpecialNestRule($selector) {
+  @return containsModifier($selector) or containWhenFlag($selector) or
+    containPseudoClass($selector);
+}

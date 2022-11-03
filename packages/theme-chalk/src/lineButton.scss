@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "./common/var.scss";
+@import "common/var";
 
 $default: $--default-font-color-1;
 $primary: $--main-fill-color-1;
@@ -140,7 +140,7 @@ $warn: $--secondary-fill-color-2;
 }
 
 .td-line-button {
-  font-size: 14px;
+  font-size: $--font-size-base;
   color: $--default-font-color-1;
   padding: 14px 36px;
   border-radius: 8px;
@@ -199,7 +199,7 @@ $warn: $--secondary-fill-color-2;
   outline: 0;
   margin: 0;
   padding: 10px 15px;
-  font-size: 14px;
+  font-size: $--font-size-base;
   border-radius: 4px;
 }
 
@@ -212,36 +212,36 @@ $warn: $--secondary-fill-color-2;
   padding: 12px;
 }
 
-.td-button--medium {
+.td-line-button--medium {
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: $--font-size-base;
   border-radius: 4px;
 }
 
-.td-button--mini,
-.td-button--small {
-  font-size: 12px;
+.td-line-button--mini,
+.td-line-button--small {
+  font-size: $--font-size-extra-small;
   border-radius: 3px;
 }
 
-.td-button--medium.is-round {
+.td-line-button--medium.is-round {
   padding: 10px 20px;
 }
 
-.td-button--medium.is-circle {
+.td-line-button--medium.is-circle {
   padding: 10px;
 }
 
-.td-button--small,
-.td-button--small.is-round {
+.td-line-button--small,
+.td-line-button--small.is-round {
   padding: 9px 15px;
 }
 
-.td-button--small.is-circle {
+.td-line-button--small.is-circle {
   padding: 9px;
 }
 
-.td-button--mini,
-.td-button--mini.is-round {
+.td-line-button--mini,
+.td-line-button--mini.is-round {
   padding: 7px 15px;
 }

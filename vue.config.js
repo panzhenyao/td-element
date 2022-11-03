@@ -1,5 +1,5 @@
 const path = require("path");
-
+const options = require("./build/config");
 const join = (dir) => {
   return path.join(__dirname, dir);
 };
@@ -18,9 +18,11 @@ const baseConfig = {
       });
 
     // =====================定义别名=========================
-    config.resolve.alias
-      .set("@", join("examples"))
-      .set("packages", join("packages"));
+    config.resolve.alias.set("@", join("examples"));
+    config.resolve.alias.set("packages", join("packages"));
+    config.resolve.alias.set("examples", join("examples"));
+    config.resolve.alias.set("td-element", join("./"));
+    config.resolve.alias.set("main", join("src"));
   },
 };
 

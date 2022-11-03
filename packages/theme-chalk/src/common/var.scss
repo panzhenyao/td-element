@@ -1,33 +1,178 @@
-/* font path
--------------------------- */
+/* Element Chalk Variables */
+
+
+/*** Customize Font Color
+-------------------------- ****/
+$--default-font-color-1: #fff !default;
+$--primary-font-color-1: #3d3e55 !default;
+$--normal-font-color-1: #7f7f95 !default;
+$--secondary-font-color-1: #c7cddf !default;
+
+
+/*** Customize Color Fill
+-------------------------- ****/
+$--default-fill-color-1: #fff !default;
+$--main-fill-color-1: #6273e7 !default;
+$--secondary-fill-color-2: #fed45f !default;
+$--secondary-fill-color-3: #fe685f !default;
+$--secondary-fill-color-4: #878aff !default;
+$--secondary-fill-color-5: #77bbff !default;
+$--secondary-fill-color-6: #76e0e4 !default;
+$--secondary-fill-color-7: #67c23a !default;
+
 
 /* Transition
 -------------------------- */
+$--all-transition: all .3s cubic-bezier(.645,.045,.355,1) !default;
+$--fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
+$--fade-linear-transition: opacity 200ms linear !default;
+$--md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
+$--border-transition-base: border-color .2s cubic-bezier(.645,.045,.355,1) !default;
 $--color-transition-base: color .2s cubic-bezier(.645,.045,.355,1) !default;
 
+/* Color
+-------------------------- */
+/// color|1|Brand Color|0
+$--color-primary: #6273e7 !default;
+/// color|1|Background Color|4
+$--color-white: #FFFFFF !default;
+/// color|1|Background Color|4
+$--color-black: #000000 !default;
+$--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default;
+$--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default;
+$--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default;
+$--color-primary-light-4: mix($--color-white, $--color-primary, 40%) !default;
+$--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default;
+$--color-primary-light-6: mix($--color-white, $--color-primary, 60%) !default;
+$--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default;
+$--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default;
+$--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default;
 
-/* Size font
--------------------------- */
-$--default-font-size-1: 14px;
+/// color|1|Functional Color|1
+$--color-success: #67c23a !default;
+/// color|1|Functional Color|1
+$--color-warning: #fed45f !default;
+/// color|1|Functional Color|1
+$--color-danger: #fe685f !default;
+/// color|1|Functional Color|1
+$--color-info: #7f7f95 !default;
 
-/* Color font
+$--color-success-light: mix($--color-white, $--color-success, 80%) !default;
+$--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
+$--color-danger-light: mix($--color-white, $--color-danger, 80%) !default;
+$--color-info-light: mix($--color-white, $--color-info, 80%) !default;
+
+$--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
+$--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
+$--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
+$--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
+
+/// color|1|Font Color|2
+$--color-text-primary: #3d3e55 !default;
+/// color|1|Font Color|2
+$--color-text-regular: #7f7f95 !default;
+/// color|1|Font Color|2
+$--color-text-secondary: #c7cddf !default;
+/// color|1|Font Color|2
+$--color-text-placeholder: #C0C4CC !default;
+/// color|1|Border Color|3
+$--border-color-base: #DCDFE6 !default;
+/// color|1|Border Color|3
+$--border-color-light: #E4E7ED !default;
+/// color|1|Border Color|3
+$--border-color-lighter: #EBEEF5 !default;
+/// color|1|Border Color|3
+$--border-color-extra-light: #F2F6FC !default;
+
+
+/* Background
 -------------------------- */
-$--default-font-color-1: #fff;
-$--primary-font-color-1: #3d3e55;
-$--normal-font-color-1: #7f7f95;
-$--secondary-font-color-1: #c7cddf;
-/* Color fill
+/// color|1|Background Color|4
+$--background-color-base: #F5F7FA !default;
+
+
+/* Link
 -------------------------- */
-$--default-fill-color-1: #fff;
-$--main-fill-color-1: #6273e7;
-$--secondary-fill-color-2: #fed45f;
-$--secondary-fill-color-3: #fe685f;
-$--secondary-fill-color-4: #878aff;
-$--secondary-fill-color-5: #77bbff;
-$--secondary-fill-color-6: #76e0e4;
-$--secondary-fill-color-7: #67c23a;
+$--link-color: $--color-primary-light-2 !default;
+$--link-hover-color: $--color-primary !default;
+
+
+/* Border
+-------------------------- */
+$--border-width-base: 1px !default;
+$--border-style-base: solid !default;
+$--border-color-hover: $--color-text-placeholder !default;
+$--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
+
+$--border-radius-base: 4px !default;
+$--border-radius-small: 2px !default;
+$--border-radius-circle: 100% !default;
+$--border-radius-zero: 0 !default;
+
+// Box-shadow
+$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04) !default;
+$--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .12) !default;
+$--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
+
+
+/* Typography
+-------------------------- */
+$--font-path: 'fonts' !default;
+$--font-display: 'auto' !default;
+/// fontSize|1|Font Size|0
+$--font-size-extra-large: 20px !default;
+/// fontSize|1|Font Size|0
+$--font-size-large: 18px !default;
+/// fontSize|1|Font Size|0
+$--font-size-medium: 16px !default;
+/// fontSize|1|Font Size|0
+$--font-size-base: 14px !default;
+/// fontSize|1|Font Size|0
+$--font-size-small: 13px !default;
+/// fontSize|1|Font Size|0
+$--font-size-extra-small: 12px !default;
+/// fontWeight|1|Font Weight|1
+$--font-weight-primary: 500 !default;
+/// fontWeight|1|Font Weight|1
+$--font-weight-secondary: 100 !default;
+/// fontLineHeight|1|Line Height|2
+$--font-line-height-primary: 24px !default;
+/// fontLineHeight|1|Line Height|2
+$--font-line-height-secondary: 16px !default;
+$--font-color-disabled-base: #bbb !default;
+
+
+/* Size
+-------------------------- */
+$--size-base: 14px !default;
+
+
+/* z-index
+-------------------------- */
+$--index-normal: 1 !default;
+$--index-top: 1000 !default;
+$--index-popper: 2000 !default;
+
+
+/* Disable base
+-------------------------- */
+$--disabled-fill-base: $--background-color-base !default;
+$--disabled-color-base: $--color-text-placeholder !default;
+$--disabled-border-base: $--border-color-light !default;
+
+
 /* Border
 -------------------------- */
 $--border-base: 1px solid $--secondary-font-color-1;
+
+
 /* Button
 -------------------------- */
+/// fontSize||Font|1
+$--button-font-size: $--font-size-base !default;
+$--button-small-font-size: $--font-size-extra-small !default;
+
+/// color||Color|0
+$--button-default-font-color: $--color-text-regular !default;
+$--button-default-background-color: $--color-white !default;
+$--button-default-border-color: $--color-text-secondary !default;

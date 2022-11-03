@@ -3,7 +3,7 @@
     <!-- 锚点 -->
     <td-anchor>
       <td-anchor-link href="anchor-Simple" title="基础方法" />
-      <td-anchor-link href="api" title="api" />
+      <td-anchor-link href="attributes" title="属性" />
     </td-anchor>
 
     <h2 class="demo-title">Anchor 锚点</h2>
@@ -24,8 +24,8 @@
     </td-demo-block>
 
     <!-- API -->
-    <div id="api">
-      <h3 class="demo-table-title">API</h3>
+    <div id="attributes">
+      <h3 class="demo-table-title">Attributes</h3>
       <P class="demo-table-introduction">属性说明如下：</P>
       <td-table-simple :data="api" :thead="thead" />
     </div>
@@ -112,6 +112,3 @@ export default {
   methods: {}
 }
 </script>
-
-<style scoped lang="scss">
-</style>

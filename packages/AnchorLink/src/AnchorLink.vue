@@ -26,6 +26,10 @@ export default {
     }
   },
   mounted() {
+    if (!document.getElementById(this.href)) {
+      console.warn('[WARNING]: anchor-link: href挂载的元素id可能未能找到')
+      return
+    }
     this.hrefTotal = document.getElementById(this.href).offsetTop - 10
     this.hrefHeight =
       document.getElementById(this.href).clientHeight + this.hrefTotal

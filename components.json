@@ -5,5 +5,9 @@
   "backTop": "./packages/backTop/index.js",
   "lineButton": "./packages/lineButton/index.js",
   "demoBlock": "./packages/demoBlock/index.js",
-  "tableSimple": "./packages/tableSimple/index.js"
+  "tableSimple": "./packages/tableSimple/index.js",
+  "link": "./packages/link/index.js",
+  "breadcrumb": "./packages/breadcrumb/index.js",
+  "breadcrumbItem": "./packages/breadcrumbItem/index.js",
+  "datePick": "./packages/datePick/index.js"
 }

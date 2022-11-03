@@ -25,9 +25,56 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-// QR-code2
-.td-icon-qrCode:before {
-  content: "\e637";
+
+
+// remove-outline
+.td-icon-remove-outline:before {
+  content: "\e601";
+}
+
+// circle-check
+.td-icon-circle-check:before {
+  content: "\e606";
+}
+
+// circle-plus-outline
+.td-icon-circle-plus-outline:before {
+  content: "\e607";
+}
+
+// circle-close
+.td-icon-circle-close:before {
+  content: "\e608";
+}
+
+// success
+.td-icon-success:before {
+  content: "\e602";
+}
+
+// circle-plus
+.td-icon-circle-plus:before {
+  content: "\e603";
+}
+
+// icon_error
+.td-icon-error:before {
+  content: "\e604";
+}
+
+// remove
+.td-icon-remove:before {
+  content: "\e605";
+}
+
+// d-arrow-left
+.td-icon-d-arrow-left:before {
+  content: "\e64d";
+}
+
+// d-arrow-right
+.td-icon-d-arrow-right:before {
+  content: "\e609";
 }
 
 // arrow-up
@@ -35,19 +82,37 @@
   content: "\e743";
 }
 
+// arrow-right
+.td-icon-arrow-right:before {
+  content: "\e694";
+}
+
+// arrow-left
+.td-icon-arrow-left:before {
+  content: "\e693";
+}
+
+
 // arrow-down
 .td-icon-arrow-down:before {
   content: "\e7b2";
 }
 
 // left arrow
-.td-icon-arrow-left:before {
+.td-icon-left:before {
   content: "\e755";
 }
 
 // Right arrow
-.td-icon-arrow-right:before {
+.td-icon-right:before {
   content: "\e761";
+}
+
+
+
+// date
+.td-icon-date:before {
+  content: "\e64e";
 }
 
 // refresh
@@ -64,6 +129,12 @@
 .td-icon-add:before {
   content: "\e767";
 }
+
+// QR-code2
+.td-icon-qrCode:before {
+  content: "\e637";
+}
+
 
 // addmessage
 .td-icon-add-message:before {

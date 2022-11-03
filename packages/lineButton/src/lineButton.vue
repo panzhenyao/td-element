@@ -9,7 +9,7 @@
     :disabled="buttonDisabled"
     :class="[
       type ?  `${type}-btn`:'' ,
-      buttonSize ? 'td-button--' + buttonSize : '',
+      buttonSize ? 'td-line-button--' + buttonSize : '',
       {
         'is-disabled': buttonDisabled,
         'is-round': round,

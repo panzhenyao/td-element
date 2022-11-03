@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "./common/var.scss";
+@import "common/var";
 
 @mixin disabled-button {
   cursor: not-allowed;
@@ -14,9 +14,9 @@
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
-  background: $--default-fill-color-1;
+  background: $--button-default-background-color;
   border: $--border-base;
-  color: $--normal-font-color-1;
+  color: $--button-default-font-color;
   -webkit-appearance: none;
   text-align: center;
   -webkit-box-sizing: border-box;
@@ -29,11 +29,11 @@
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  font-size: 14px;
+  font-size: $--button-font-size;
   border-radius: 4px;
   &.is-round {
     border-radius: 20px;
-    padding: 12px 23px;
+    padding: 7px 16px;
     &.is-circle {
       border-radius: 20px;
       padding: 5px 23px;
@@ -44,10 +44,22 @@
     padding: 5px 8px;
     min-width: unset;
   }
+  
+  &.td-button--medium {
+    font-size: $--button-small-font-size;
+    height: 36px;
+  }
+
+  &.td-button--small {
+    font-size: $--button-small-font-size;
+    height: 32px;
+  }
+
   &.td-button--mini {
-    font-size: 12px;
+    font-size: $--button-small-font-size;
     height: 28px;
   }
+
   &.td-button--text {
     height: unset;
     min-width: unset;
@@ -65,9 +77,9 @@
     }
   }
   &.td-button--default {
-    color: $--normal-font-color-1;
-    background-color: $--default-fill-color-1;
-    border-color: #c7cddf;
+    color: $--button-default-font-color;
+    background-color: $--button-default-background-color;
+    border-color: $--button-default-border-color;
 
     &:hover {
       color: $--main-fill-color-1;
@@ -189,14 +201,14 @@
     border-color: $--normal-font-color-1;
     &:hover {
       color: $--default-font-color-1;
-      background-color: #AEAECC;
-      border-color: #AEAECC;
+      background-color: #aeaecc;
+      border-color: #aeaecc;
     }
 
     &:active {
       color: $--default-font-color-1;
-      background-color: #7E7E94;
-      border-color: #7E7E94;
+      background-color: #7e7e94;
+      border-color: #7e7e94;
     }
     &.is-disabled {
       @include disabled-button;

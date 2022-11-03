@@ -28,7 +28,7 @@
     <p class="demo-introduction">
       gitee代码仓库地址
       <a href="https://e.gitee.com/tiandaai/repos/tiandaai/td-element/sources" target="https://e.gitee.com/tiandaai/repos/tiandaai/td-element/sources">
-        <span class="td-icon-gitee" style="margin: 0 20px; font-size: 26px"></span>
+        <span class="td-icon-gitee" style="position: relative; top: 4px; left: 4px; font-size: 26px"></span>
       </a>
     </p>
 

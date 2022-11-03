@@ -17,7 +17,7 @@ npm uninstall td-element
 ## Quick Start
 ``` javascript
 import Vue from 'vue'
-import TdElement from 'td-element'
+import TdElement from 'td-element/lib'
 import 'td-element/lib/theme-chalk/index.css'
 Vue.use(TdElement)
 

@@ -73,6 +73,7 @@ export default {
       if (from.path !== to.path) {
         document.documentElement.scrollTop = 0
       }
+      this.showHistoryCurrent()
     }
   },
   created() {
@@ -102,7 +103,7 @@ export default {
     showHistoryCurrent() {
       this.ul_data.forEach(navGroup => {
         navGroup.li_data.forEach(item => {
-          if (item.path.substring(1) === this.$router.history.current.fullPath) {
+          if (item.path.substring(1) === this.$router.history.current.path) {
             this.active = item.id
           }
         })
@@ -210,6 +211,7 @@ export default {
           margin-top: 15px;
         }
         .pure-menu-list {
+          padding-left: 0;
           a {
             display: block;
             height: 40px;

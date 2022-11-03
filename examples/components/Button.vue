@@ -8,7 +8,8 @@
       <td-anchor-link href="button-Line" title="线性按钮" />
       <td-anchor-link href="button-disabled" title="禁用" />
       <td-anchor-link href="button-Size" title="按钮尺寸" />
-      <td-anchor-link href="api" title="API" />
+      <td-anchor-link href="button-attributes" title="button属性" />
+      <td-anchor-link href="line-button-attributes" title="line button属性" />
     </td-anchor>
 
     <h3 class="demo-table-title" id="button-simple">基础用法</h3>
@@ -101,10 +102,15 @@
     </td-demo-block>
 
     <!-- API -->
-    <div id="api">
-      <h3 class="demo-table-title">API</h3>
+    <div id="button-attributes">
+      <h3 class="demo-table-title">Button Attributes</h3>
       <P class="demo-table-introduction">属性说明如下：</P>
-      <td-table-simple :data="api" :thead="thead" />
+      <td-table-simple :data="apiButton" :thead="thead" />
+    </div>
+    <div id="line-button-attributes">
+      <h3 class="demo-table-title">Line Button Attributes</h3>
+      <P class="demo-table-introduction">属性说明如下：</P>
+      <td-table-simple :data="apiLineButton" :thead="thead" />
     </div>
   </div>
 </template>
@@ -113,7 +119,7 @@
 export default {
   data() {
     return {
-      thead: ['参数', '说明', '类型', '可选值', '默认值', '支持组件'],
+      thead: ['参数', '说明', '类型', '可选值', '默认值'],
       // a: document.getElementById("router_view_box"),
       simple: {
         code: {
@@ -175,22 +181,20 @@ export default {
           `
         }
       },
-      api: [
+      apiButton: [
         {
           parameter: 'type',
           description: '设置按钮类型',
           dataTypes: 'String',
           optional: 'default / primary / success  / danger / warn / info',
           default: 'default',
-          support: '*'
         },
         {
           parameter: 'size',
           description: '设置按钮大小',
           dataTypes: 'String',
           optional: 'medium/small/mini',
-          default: 'medium',
-          support: '*'
+          default: 'mini',
         },
         {
           parameter: 'disabled',
@@ -198,7 +202,6 @@ export default {
           dataTypes: 'Boolean',
           optional: 'true/false',
           default: 'false',
-          support: '*'
         },
         {
           parameter: 'icon',
@@ -206,7 +209,6 @@ export default {
           dataTypes: 'String',
           optional: '',
           default: '',
-          support: 'td-button'
         },
         {
           parameter: 'circle',
@@ -214,7 +216,6 @@ export default {
           dataTypes: 'Boolean',
           optional: 'true/false',
           default: 'false',
-          support: '*'
         },
         {
           parameter: 'round',
@@ -222,7 +223,6 @@ export default {
           dataTypes: 'Boolean',
           optional: 'true/false',
           default: 'false',
-          support: '*'
         },
         {
           parameter: 'visitedState',
@@ -230,8 +230,44 @@ export default {
           dataTypes: 'Boolean',
           optional: 'true/false',
           default: 'false',
-          support: 'td-button'
         }
+      ],
+      apiLineButton: [
+        {
+          parameter: 'type',
+          description: '设置按钮类型',
+          dataTypes: 'String',
+          optional: 'default / primary / success  / danger / warn / info',
+          default: 'default',
+        },
+        {
+          parameter: 'size',
+          description: '设置按钮大小',
+          dataTypes: 'String',
+          optional: 'medium/small/mini',
+          default: 'medium',
+        },
+        {
+          parameter: 'disabled',
+          description: '是否禁用按钮',
+          dataTypes: 'Boolean',
+          optional: 'true/false',
+          default: 'false',
+        },
+        {
+          parameter: 'circle',
+          description: '是否圆形按钮',
+          dataTypes: 'Boolean',
+          optional: 'true/false',
+          default: 'false',
+        },
+        {
+          parameter: 'round',
+          description: '是否椭圆按钮',
+          dataTypes: 'Boolean',
+          optional: 'true/false',
+          default: 'false',
+        },
       ]
     }
   },

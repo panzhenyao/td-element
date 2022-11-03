@@ -7,6 +7,10 @@ import BackTop from '../packages/backTop/index.js';
 import LineButton from '../packages/lineButton/index.js';
 import DemoBlock from '../packages/demoBlock/index.js';
 import TableSimple from '../packages/tableSimple/index.js';
+import Link from '../packages/link/index.js';
+import Breadcrumb from '../packages/breadcrumb/index.js';
+import BreadcrumbItem from '../packages/breadcrumbItem/index.js';
+import DatePick from '../packages/datePick/index.js';
 
 const components = [
   Button,
@@ -16,6 +20,10 @@ const components = [
   LineButton,
   DemoBlock,
   TableSimple,
+  Link,
+  Breadcrumb,
+  BreadcrumbItem,
+  DatePick,
 ];
 
 const install = function(Vue) {
@@ -30,7 +38,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '0.1.12',
+  version: '0.1.14',
   install,
   Button,
   Anchor,
@@ -38,5 +46,9 @@ export default {
   BackTop,
   LineButton,
   DemoBlock,
-  TableSimple
+  TableSimple,
+  Link,
+  Breadcrumb,
+  BreadcrumbItem,
+  DatePick
 };

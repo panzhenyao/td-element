@@ -36,6 +36,72 @@ export default {
   data() {
     return {
       logData: [
+         {
+          version: '0.1.14',
+          date: '2022-10-18',
+          list: [
+            {
+              type: 'feat 开发',
+              data: [
+                {
+                  title: 'Breadcrumb',
+                  texts: [
+                    '新增Breadcrumb组件的功能',
+                    '调整Breadcrumb组件的功能,在非drg-front项目下使用场景',
+                    '新增Breadcrumb组件的描述文档'
+                  ]
+                },
+                {
+                  title: 'Link',
+                  texts: [
+                    '新增suffix-icon属性,用于显示文本后的图标类名'
+                  ]
+                }
+              ]
+            },
+            {
+              type: 'fix 缺陷修复',
+              data: [
+                {
+                  title: 'breadcrumb-item',
+                  texts: [
+                    '当属性to为字符串时跳转缺陷处理',
+                  ]
+                },
+              ]
+            }
+          ]
+        },
+        {
+          version: '0.1.13',
+          date: '2022-10-12',
+          list: [
+            {
+              type: 'feat 开发',
+              data: [
+                {
+                  title: 'Link',
+                  texts: [
+                    '新增Link组件的功能',
+                    '调整Link组件的功能,在非drg-front项目下使用场景',
+                    '新增Link组件的描述文档'
+                  ]
+                }
+              ]
+            },
+            {
+              type: 'fix 缺陷修复',
+              data: [
+                {
+                  title: 'Link',
+                  texts: [
+                    '对非DRG项目跳转得优化',
+                  ]
+                }
+              ]
+            }
+          ]
+        },
         {
           version: '0.1.11',
           date: '2022-10-11',
@@ -85,7 +151,7 @@ export default {
     position: relative;
     color: #5e6d82;
     > li:not(:last-child) {
-      margin-bottom: 0;
+      margin-bottom: 50px;
     }
     > li {
       position: relative;

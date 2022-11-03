@@ -1,6 +1,6 @@
 {
   "name": "td-element",
-  "version": "0.1.12",
+  "version": "0.1.14",
   "description": "Collect some useful components",
   "author": {
     "name": "panzhenyao"
@@ -8,11 +8,12 @@
   "scripts": {
     "build:file": "node build/bin/iconInit.js & node build/bin/build-entry.js & node build/bin/version.js",
     "build:theme": "node build/bin/gen-cssfile && gulp build --gulpfile packages/theme-chalk/gulpfile.js && cp-cli packages/theme-chalk/lib lib/theme-chalk",
+    "build:utils": "cross-env BABEL_ENV=utils babel src --out-dir lib --ignore src/index.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "clean": "rimraf lib && rimraf packages/*/lib",
     "lint": "eslint src/**/* packages/**/* build/**/* --quiet",
-    "dist": "npm run clean && npm run build:file && npm run lint && webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js && npm run build:theme"
+    "dist": "npm run clean && npm run build:file && npm run lint && webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js && npm run build:utils &&  npm run build:theme"
   },
   "keyword": "td-element",
   "files": [
@@ -38,6 +39,17 @@
     "@vue/cli-plugin-eslint": "^4.4.0",
     "@vue/cli-service": "^4.4.0",
     "babel-eslint": "^10.1.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-istanbul": "^4.1.1",
+    "babel-plugin-module-resolver": "^2.2.0",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-vue-jsx": "^3.7.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-regenerator-runtime": "^6.5.0",
     "cp-cli": "^1.0.2",
     "cross-env": "^3.1.3",
     "eslint": "6.7.2",
@@ -64,6 +76,9 @@
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.11",
     "webpack-node-externals": "^1.7.2"
+  },
+  "publishConfig": {
+    "registry": "http://office.tiandaai.com:10038/repository/td-npm-hosted"
   },
   "eslintConfig": {
     "root": true,
